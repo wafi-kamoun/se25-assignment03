@@ -2,9 +2,11 @@ name: Build CampusCoffee
 
 on:
   push:
-    branches: [ "feature/**" ]
+    branches:
+      - 'feature/**'
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - 'main'
 
 jobs:
   build:
@@ -16,6 +18,9 @@ jobs:
           fetch-depth: 0
 
       - uses: jdx/mise-action@v2
+
+      - name: Install correct versions (optional override)
+        run: mise install
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
