@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 @Profile("dev")
-class LoadInitialData implements InitializingBean {
+class LoadInitialData implements InitializingBean { 
     private final PosService posService;
 
     @Override
