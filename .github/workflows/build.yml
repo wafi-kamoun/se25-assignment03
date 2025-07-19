@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Check Java version
-        run: java -version
+        run: java --version
       - uses: jdx/mise-action@v2
 
       - name: Install correct versions (optional override)
